@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ncionalidade</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-align: center;
+            background-color: rgb(163, 73, 8);
+        }
+        h1{
+            color: bisque;
+            margin-bottom: -1px;
+        }
+        input{
+            border-radius: 8px;
+            text-align: center;
+            background-color:rgb(233, 230, 230);
+            color:black;
+            padding: 4px;
+        }
+        button{
+            margin-top: 6px;
+            border-radius: 6px;
+            color: bisque;
+            background-color: brown;
+            cursor: pointer;
+        }
+        #res{
+            color: bisque;
+            margin-top: 5px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>Qual sua nacionalidade</h1>
+    <input type="text" name="nac" id="nac" placeholder="Insira o país onde nasceu">
+    <button id="btn">Verificar</button>
+    <div id="res">Nacionalidade...</div>
+
+    <script>
+        var nac=document.getElementById('nac');
+        var botao=document.getElementById('btn');
+        var res=document.getElementById('res');
+
+        botao.addEventListener('click', verificar);
+
+        function verificar(){
+            var nacionalidade=nac.value;
+            if(nacionalidade== 'Brasil'){
+                res.innerHTML=`Você nasceu no ${nacionalidade}, você é Brasileiro.`
+            }else{
+                res.innerHTML=`Você nasceu em ${nacionalidade}, você não é Brasileiro.`
+            }
+        }
+    </script>
+</body>
+</html>

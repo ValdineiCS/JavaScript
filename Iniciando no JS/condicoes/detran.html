@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detran</title>
+    <style>
+        body{
+            background-color: rgb(229, 101, 3);
+            text-align: center;
+        }
+        h1{
+           
+            color: aquamarine;
+        }
+
+        input{
+            padding: 8px;
+            border-radius: 10px;
+            margin-bottom: 8px
+        }
+        button{
+            border-radius: 6px;
+            color: aquamarine;
+            background-color: rgb(85, 55, 55);
+            cursor: pointer;
+        }
+        #res{
+            color: aqua;
+            font-size: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Radar de trânsito</h1>
+    <input type="number" name="vel" id="vel" placeholder="Insira a sua velocidade">
+    <button id="botao">Verificar</button>
+    <div id="res">Velocidade...</div>
+
+    <script>
+        var vel=document.getElementById('vel');
+        var botao=document.getElementById('botao');
+        var res=document.getElementById('res');
+
+        botao.addEventListener('click', Verificar);
+
+        function Verificar(){
+            var velocidade=Number(vel.value);
+            if(velocidade > 80){
+                res.innerHTML=`A velocidade informada é de ${velocidade}km/h. Você está multado!`
+            }else{
+                res.innerHTML=`A volocidade de ${velocidade}km/h está dentro do permitido. Continue com segurança`
+            }
+        }
+    </script>
+</body>
+</html>
