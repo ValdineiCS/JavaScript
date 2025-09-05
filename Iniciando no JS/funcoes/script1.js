@@ -2,7 +2,7 @@ var adicionar=document.getElementById('adicionar').addEventListener('click', adi
 let finalizar=document.getElementById('fnum').addEventListener('click', analizar)
 let num=document.getElementById('num1');
 let lista=document.getElementById("flista");
-let res=document.querySelector('div#res');
+let res=document.querySelector('p#res');
 let valores=[]
 
 
